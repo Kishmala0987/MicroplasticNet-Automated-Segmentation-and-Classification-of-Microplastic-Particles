@@ -5,6 +5,8 @@ This project focuses on **binary semantic segmentation of microplastics** in mic
 The goal is simple and precise:
 Microplastics are small, irregular particles that are difficult to identify through manual inspection due to noise, variability in shape, and dense backgrounds. This project formulates the task as a binary segmentation problem, where each pixel is classified as either microplastic or background.
 
+Given the strong class imbalance in the dataset, a plastic-aware patch sampling strategy is employed to increase the likelihood of selecting patches that contain microplastic regions.
+
 👉 **Predict a binary mask indicating the presence of microplastics (pixel-wise classification).**
 
 ---
@@ -122,7 +124,7 @@ The model is evaluated using:
 
 Most patches contain **no microplastics**, causing the model to predict only background.
 
-### ✅ Solution Implemented
+###  Solution Implemented
 
 * Plastic-aware patch sampling:
 
@@ -187,8 +189,6 @@ This project demonstrates a complete pipeline for:
 ✔️ Training a U-Net model
 ✔️ Evaluating segmentation performance
 
-The current focus is strictly on:
-
-> 🔹 **Accurate binary mask prediction of microplastics**
+This project demonstrates a complete pipeline for binary segmentation of microplastics using deep learning. While current results indicate moderate performance, the framework provides a solid foundation for further research and improvement in microscopic image analysis.
 
 ---
